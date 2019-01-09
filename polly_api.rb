@@ -8,8 +8,9 @@ puts '-----------Choose an input language-------------'
 puts '----------------- 1) English -------------------'
 puts '----------------- 2) Spanish -------------------'
 puts '----------------- 3) Italian -------------------'
-
+ARGV.clear
 input = languages[gets.chomp.to_i - 1]
+puts input
 input_lang = language_code_mapping[input]
 
 puts '----------Choose an output language-------------'
@@ -50,4 +51,4 @@ IO.copy_stream(resp.audio_stream, mp3_file)
 puts "#{input}: #{text}"
 puts "#{output}: #{translated.translated_text}"
 
-`afplay ~/Desktop/polly-api.mp3`
+`afplay polly-api.mp3`
