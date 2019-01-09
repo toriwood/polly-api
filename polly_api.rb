@@ -8,9 +8,8 @@ puts '-----------Choose an input language-------------'
 puts '----------------- 1) English -------------------'
 puts '----------------- 2) Spanish -------------------'
 puts '----------------- 3) Italian -------------------'
-ARGV.clear
+
 input = languages[gets.chomp.to_i - 1]
-puts input
 input_lang = language_code_mapping[input]
 
 puts '----------Choose an output language-------------'
